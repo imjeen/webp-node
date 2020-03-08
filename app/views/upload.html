@@ -1,0 +1,21 @@
+<style>
+    body {
+        padding: 50px;
+        font: 14px Helvetica, Arial;
+    }
+</style>
+<h1>File Upload</h1>
+<p>Try uploading multiple files at a time.</p>
+<form action="/api/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" multiple>
+    <input type="submit" value="Upload">
+</form> 
+<br>
+<br>    
+<ol>
+    <% list.forEach(function (item) {%>
+      <li>
+            <a href="<%= item %>"><%= item %></a>
+      </li>
+    <% })%>
+  </ol> 

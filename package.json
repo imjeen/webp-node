@@ -1,0 +1,29 @@
+{
+  "name": "webp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prewatch": "mkdir -pv ./dist/app && mkdir -pv ./dist/public/upload &&  cp -r ./public/ ./dist/public/ && ln -sF $PWD/app/views/ ./dist/app/",
+    "watch": "npx tsc && (npx tsc -w & npx pm2-dev ./dist/server.js)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-ejs": "^4.3.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1",
+    "module-alias": "^2.2.2",
+    "pm2": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.2",
+    "@types/node": "^13.7.7",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}

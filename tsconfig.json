@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "rootDir": "./",
+        "baseUrl": ".",
+        "outDir": "./dist",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "strictPropertyInitialization": false,
+        "module": "CommonJS",
+        // "strict": true,
+        "target": "ESNext",
+        "sourceMap": true,
+        "lib": ["es2017", "es2016"],
+        "moduleResolution": "node",
+        "resolveJsonModule": true, // json files
+        "paths": {
+            "@app/*": ["app/*"],
+        }
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "dist", "temp"]
+}
